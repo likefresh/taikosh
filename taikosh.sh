@@ -87,26 +87,26 @@ function list_recommended_ports {
 list_recommended_ports
 
 # 提示用户输入端口配置，允许使用默认值
-read -p "请输入L2执行引擎HTTP端口 [默认: 8547]: " port_l2_execution_engine_http
-port_l2_execution_engine_http=${port_l2_execution_engine_http:-8547}
+read -p "请输入L2执行引擎HTTP端口 [默认: 18547]: " port_l2_execution_engine_http
+port_l2_execution_engine_http=${port_l2_execution_engine_http:-18547}
 
-read -p "请输入L2执行引擎WS端口 [默认: 8548]: " port_l2_execution_engine_ws
-port_l2_execution_engine_ws=${port_l2_execution_engine_ws:-8548}
+read -p "请输入L2执行引擎WS端口 [默认: 18548]: " port_l2_execution_engine_ws
+port_l2_execution_engine_ws=${port_l2_execution_engine_ws:-18548}
 
-read -p "请输入L2执行引擎Metrics端口 [默认: 6060]: " port_l2_execution_engine_metrics
-port_l2_execution_engine_metrics=${port_l2_execution_engine_metrics:-6060}
+read -p "请输入L2执行引擎Metrics端口 [默认: 16060]: " port_l2_execution_engine_metrics
+port_l2_execution_engine_metrics=${port_l2_execution_engine_metrics:-16060}
 
 read -p "请输入L2执行引擎P2P端口 [默认: 30306]: " port_l2_execution_engine_p2p
 port_l2_execution_engine_p2p=${port_l2_execution_engine_p2p:-30306}
 
-read -p "请输入证明者服务器端口 [默认: 9876]: " port_prover_server
-port_prover_server=${port_prover_server:-9876}
+read -p "请输入证明者服务器端口 [默认: 19876]: " port_prover_server
+port_prover_server=${port_prover_server:-19876}
 
-read -p "请输入Prometheus端口 [默认: 9091]: " port_prometheus
-port_prometheus=${port_prometheus:-9091}
+read -p "请输入Prometheus端口 [默认: 19091]: " port_prometheus
+port_prometheus=${port_prometheus:-19091}
 
-read -p "请输入Grafana端口 [默认: 3001]: " port_grafana
-port_grafana=${port_grafana:-3001}
+read -p "请输入Grafana端口 [默认: 13001]: " port_grafana
+port_grafana=${port_grafana:-13001}
 
 # 将用户输入的值写入.env文件
 sed -i "s|L1_ENDPOINT_HTTP=.*|L1_ENDPOINT_HTTP=${l1_endpoint_http}|" .env
